@@ -1,0 +1,6 @@
+__pycache__/
+.venv/
+.ipynb_checkpoints/
+~$*
+datos/raw/F1_*.csv
+datos/raw/F2_*.json
