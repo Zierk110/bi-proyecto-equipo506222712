@@ -14,7 +14,8 @@ entidades de Cundinamarca.
 | Jennifer Urueña Gutiérrez | 507241702 |
 
 ## Herramientas
-Python  · draw.io · GitHub
+
+MySQL 8.4 · DBeaver · Pentaho Data Integration 9.4 · Power BI Desktop · Python · draw.io · GitHub
 
 ## Fuentes (detalle en datos/descarga.md)
 | Id | Fuente | Formato |
