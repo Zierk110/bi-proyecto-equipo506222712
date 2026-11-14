@@ -1,0 +1,294 @@
+{
+  "registros_dataset": 12600,
+  "entidades": 350,
+  "distribucion_objetivo": {
+    "registros": 12600,
+    "pct_ceros": 52.388888888888886,
+    "min": 0.0,
+    "mediana": 0.0,
+    "media": 1211.3582308238097,
+    "p75": 225.34910125,
+    "p95": 3874.916591649978,
+    "p99": 20324.203760710017,
+    "max": 1197551.915132,
+    "atipicos_iqr": 781,
+    "limite_iqr": 2901.1204835
+  },
+  "preparacion": {
+    "nulos_orden": 0,
+    "nulos_sector": 0,
+    "nulos_rama": 0,
+    "nulos_entidad_centralizada": 0,
+    "filas_2023_sin_anio_anterior": 4200,
+    "nulos_pct_directa": 2280,
+    "tope_p99_millones": 15275.977213430257,
+    "atipicos_objetivo_train": 42,
+    "atipicos_valor_mismo_mes_anio_ant": 111,
+    "atipicos_media_mensual_anio_ant": 132,
+    "filas_train": 4200,
+    "filas_test": 4200
+  },
+  "correlacion_spearman": {
+    "mismo_mes_anio_ant": 0.6720620652428458,
+    "media_mensual_anio_ant": 0.694189570319115
+  },
+  "metricas_prueba": {
+    "Regresión lineal": {
+      "MAE": 1172.128,
+      "RMSE": 8004.903,
+      "Total predicho 2025 (miles de millones)": 2701.67
+    },
+    "Bosque aleatorio": {
+      "MAE": 1119.083,
+      "RMSE": 8017.679,
+      "Total predicho 2025 (miles de millones)": 2495.679
+    },
+    "Referencia: promedio mensual año anterior": {
+      "MAE": 1107.872,
+      "RMSE": 7681.949,
+      "Total predicho 2025 (miles de millones)": 3285.237
+    },
+    "Referencia: mismo mes año anterior": {
+      "MAE": 1094.326,
+      "RMSE": 7857.475,
+      "Total predicho 2025 (miles de millones)": 2653.888
+    }
+  },
+  "modelo_elegido": "Bosque aleatorio",
+  "parametros_rf": {
+    "n_estimators": 300,
+    "max_depth": 10,
+    "min_samples_leaf": 5,
+    "random_state": 42
+  },
+  "criterio": {
+    "mejora_minima_pct": 10.0,
+    "mejora_obtenida_pct": -1.0119070270768082,
+    "cumple": false
+  },
+  "error_depto_mensual_pct": 55.643096920492944,
+  "pct_error_top20": 71.79507309903812,
+  "mediana_error_abs": 83.61848197996794,
+  "total_real_2025_millones": 5912557.255231,
+  "total_pred_2026_millones": 4424364.087521464,
+  "pred_2026_por_mes_miles_millones": {
+    "1": 431.5160135297058,
+    "2": 473.6194453656513,
+    "3": 381.85832245267784,
+    "4": 348.9408852701991,
+    "5": 334.09728510365846,
+    "6": 321.5986926696885,
+    "7": 345.0674829138699,
+    "8": 329.68675318918963,
+    "9": 326.1700949580811,
+    "10": 351.9908826171337,
+    "11": 367.88176398022375,
+    "12": 411.9364654713838
+  },
+  "real_2025_por_mes_vs_pred": [
+    {
+      "mes": 1,
+      "real": 526.56,
+      "pred": 243.65,
+      "error_pct": 53.73
+    },
+    {
+      "mes": 2,
+      "real": 552.47,
+      "pred": 254.14,
+      "error_pct": 54.0
+    },
+    {
+      "mes": 3,
+      "real": 470.42,
+      "pred": 206.37,
+      "error_pct": 56.13
+    },
+    {
+      "mes": 4,
+      "real": 533.5,
+      "pred": 192.82,
+      "error_pct": 63.86
+    },
+    {
+      "mes": 5,
+      "real": 547.55,
+      "pred": 192.88,
+      "error_pct": 64.77
+    },
+    {
+      "mes": 6,
+      "real": 492.93,
+      "pred": 189.06,
+      "error_pct": 61.64
+    },
+    {
+      "mes": 7,
+      "real": 383.25,
+      "pred": 191.45,
+      "error_pct": 50.04
+    },
+    {
+      "mes": 8,
+      "real": 336.99,
+      "pred": 185.61,
+      "error_pct": 44.92
+    },
+    {
+      "mes": 9,
+      "real": 299.61,
+      "pred": 196.93,
+      "error_pct": 34.27
+    },
+    {
+      "mes": 10,
+      "real": 491.87,
+      "pred": 202.04,
+      "error_pct": 58.92
+    },
+    {
+      "mes": 11,
+      "real": 782.78,
+      "pred": 195.13,
+      "error_pct": 75.07
+    },
+    {
+      "mes": 12,
+      "real": 494.64,
+      "pred": 245.6,
+      "error_pct": 50.35
+    }
+  ],
+  "entidades_superan_promedio": 304,
+  "superan_entre_70_mayores": 45,
+  "ranking_2025": {
+    "spearman": 0.7898074222630627,
+    "top20": 17,
+    "top50": 43,
+    "pct_valor_capturado_top20": 69.45283970408782
+  },
+  "top10_2026": [
+    {
+      "nombre_entidad": "MUNICIPIO DE SOACHA.",
+      "pred_2026": 186165.6,
+      "real_2025": 609999.9,
+      "promedio_hist": 38482.2,
+      "supera_promedio": false
+    },
+    {
+      "nombre_entidad": "ALCALDIA MUNICIPAL DE CHIA",
+      "pred_2026": 145006.7,
+      "real_2025": 148572.8,
+      "promedio_hist": 17581.7,
+      "supera_promedio": false
+    },
+    {
+      "nombre_entidad": "ALCALDIA MUNICIPAL DE FACATATIVA",
+      "pred_2026": 134687.2,
+      "real_2025": 184683.6,
+      "promedio_hist": 9222.8,
+      "supera_promedio": true
+    },
+    {
+      "nombre_entidad": "MUNICIPIO DE TOCANCIPA",
+      "pred_2026": 130881.7,
+      "real_2025": 273199.3,
+      "promedio_hist": 13520.1,
+      "supera_promedio": false
+    },
+    {
+      "nombre_entidad": "ALCALDÍA MUNICIPAL COTA",
+      "pred_2026": 128922.3,
+      "real_2025": 438298.7,
+      "promedio_hist": 21433.8,
+      "supera_promedio": false
+    },
+    {
+      "nombre_entidad": "ALCALDÍA MUNICIPAL DE MADRID CUNDINAMARCA",
+      "pred_2026": 127681.1,
+      "real_2025": 152415.5,
+      "promedio_hist": 8510.5,
+      "supera_promedio": true
+    },
+    {
+      "nombre_entidad": "ALCALDIA MUNICIPIO DE ZIPAQUIRA",
+      "pred_2026": 120240.7,
+      "real_2025": 147406.1,
+      "promedio_hist": 13093.3,
+      "supera_promedio": false
+    },
+    {
+      "nombre_entidad": "DEPARTAMENTO DE CUNDINAMARCA - SECRETARIA DE EDUCACION",
+      "pred_2026": 116034.9,
+      "real_2025": 203924.6,
+      "promedio_hist": 14573.6,
+      "supera_promedio": false
+    },
+    {
+      "nombre_entidad": "ALCALDIA MUNICIPIO DE CAJICA",
+      "pred_2026": 113153.6,
+      "real_2025": 137500.2,
+      "promedio_hist": 10826.9,
+      "supera_promedio": false
+    },
+    {
+      "nombre_entidad": "ALCALDIA MUNICIPAL FUSAGASUGA",
+      "pred_2026": 112954.5,
+      "real_2025": 93975.1,
+      "promedio_hist": 7853.7,
+      "supera_promedio": true
+    }
+  ],
+  "importancia": [
+    {
+      "variable": "media_mensual_anio_ant",
+      "aumento_MAE_millones": 387.528
+    },
+    {
+      "variable": "valor_mismo_mes_anio_ant",
+      "aumento_MAE_millones": 73.022
+    },
+    {
+      "variable": "contratos_anio_ant",
+      "aumento_MAE_millones": 72.679
+    },
+    {
+      "variable": "meses_activos_anio_ant",
+      "aumento_MAE_millones": 47.711
+    },
+    {
+      "variable": "sector",
+      "aumento_MAE_millones": 23.5
+    },
+    {
+      "variable": "contratos_mismo_mes_anio_ant",
+      "aumento_MAE_millones": 19.414
+    },
+    {
+      "variable": "pct_directa_anio_ant",
+      "aumento_MAE_millones": 18.186
+    },
+    {
+      "variable": "mes",
+      "aumento_MAE_millones": 7.655
+    },
+    {
+      "variable": "entidad_centralizada",
+      "aumento_MAE_millones": 2.035
+    },
+    {
+      "variable": "orden",
+      "aumento_MAE_millones": 1.278
+    },
+    {
+      "variable": "rama",
+      "aumento_MAE_millones": -0.062
+    }
+  ],
+  "tabla_pred_registros": 8400,
+  "versiones": {
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1"
+  },
+  "fecha_ejecucion": "2026-11-13 22:23:17"
+}
